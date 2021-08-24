@@ -8,6 +8,9 @@
   {% if page.social.type == 'article' %}<meta name="author" content="{{ site.author }}">{% endif %}
   <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+  <meta name="oldrev" content="{{ site.oldrev }}">
+  <meta name="newrev" content="{{ site.newrev }}">
+  <meta name="branch" content="{{ site.branch }}">
 
   <link rel="shortcut icon" href="{% asset_path 'favicons/apple-touch-icon.png' %}">
   <link rel="icon" href="{% asset_path 'favicons/apple-touch-icon.png' %}">
