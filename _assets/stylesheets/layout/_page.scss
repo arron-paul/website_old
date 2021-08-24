@@ -1,0 +1,19 @@
+@import 'bourbon';
+@import 'neat';
+
+section.page {
+
+  main {
+
+    @include span-columns(8 of 12);
+    @include shift(1 of 10);
+
+    @include media(new-breakpoint(max-width $width-mobile 1)) {
+
+      @include span-columns(1 of 1);
+      @include shift(0 of 10);
+
+    }
+  }
+
+}

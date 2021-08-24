@@ -1,0 +1,56 @@
+@import 'bourbon';
+@import 'neat';
+
+html, :root {
+  font-family: $font-sans;
+  font-size: $font-size;
+  line-height: $baseline-unitless;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "liga" 1, "onum" 1, "kern" 1;
+  font-kerning: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #000;
+
+  @media (min-device-pixel-ratio: 2) {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+
+  @media screen and (max-width: $width-mobile) {
+    font-size: $font-size * 0.8;
+  }
+
+  @media screen and (min-width: $width-mobile) {
+    font-size: $font-size * 0.9;
+  }
+
+  @media screen and (min-width: $width-desktop-big) {
+    font-size: $font-size * 1.0;
+  }
+
+}
+
+@include selection {
+  background-color: rgba(0, 0, 0, .1);
+}
+
+.wrap {
+  margin: 0 auto;
+  padding: 0 1em;
+  @include outer-container($width-desktop);
+
+  @media screen and (min-width: $width-desktop) {
+    max-width: $width-desktop;
+  }
+
+  @media screen and (min-width: $width-desktop-big) {
+    max-width: $width-desktop-big;
+  }
+
+}

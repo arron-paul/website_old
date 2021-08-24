@@ -1,0 +1,54 @@
+@import 'bourbon';
+@import 'neat';
+
+section.post {
+  background-color: #fff;
+  -webkit-transform: translate3d(0,0,0); /* Safari z-index bug */
+  z-index: 1;
+
+  main {
+    margin-top: 4em;
+
+    article {
+      @include span-columns(8 of 10);
+      @include shift(1 of 10);
+
+      @include media(new-breakpoint(max-width $width-mobile 1)) {
+        @include span-columns(1 of 1);
+        @include shift(0 of 10);
+      }
+
+      picture {
+        margin-left: -1em;
+        margin-right: -1em;
+      }
+
+      ul {
+        list-style: square;
+        li {
+          margin-bottom: $baseline;
+        }
+      }
+
+      .footnotes {
+        font-family: $font-sans;
+        font-size: .8em;
+        margin-bottom: $baseline;
+
+        ul, ol, p {
+          list-style-type: decimal;
+          margin-bottom: 0;
+
+          @media screen and (max-width: $width-mobile) {
+            list-style-position: inside;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}

@@ -1,0 +1,19 @@
+{% if page.header.display != false %}
+
+{% if page.header.fixed %}
+    {% capture is_fixed %} fixed-in-place{% endcapture %}
+{% endif %}
+
+<header class="header{{ is_fixed }}">
+
+  <div class="wrap">
+
+    {% include branding.html %}
+
+    {% include navigation.html %}
+
+  </div>
+
+</header>
+
+{% endif %}

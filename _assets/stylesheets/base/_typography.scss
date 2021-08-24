@@ -1,0 +1,114 @@
+h1 {
+  font-weight: 100;
+  font-size: 2.5rem;
+  font-family: $font-fancy;
+  line-height: 1.25;
+  letter-spacing: -.04em;
+  margin-left: -3px;
+
+  @media (max-width: 500px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.25;
+
+  * + & {
+    padding-top: $baseline;
+  }
+}
+
+h3 {
+  margin-bottom: $baseline / 2;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+h4 {
+  margin-bottom: $baseline / 2;
+  font-weight: 400;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: #000;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-bottom: $baseline;
+}
+
+q {
+  quotes: none;
+
+  &:before, &:after {
+    content: '';
+    content: none;
+  }
+}
+
+figure {
+
+  figcaption {
+    font-family: $font-sans;
+    font-size: .8em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+mark {
+  background-color: transparent;
+}
+
+strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+blockquote {
+  padding: 0 $baseline;
+  border-left: 2px solid #000;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+  text-decoration: none;
+}
+
+sup, sub {
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.4em;
+}
+
+sub {
+  top: 0.4em;
+}
+
+small {
+  font-size: 80%;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 1em;
+}

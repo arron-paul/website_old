@@ -1,0 +1,12 @@
+# Ignore the generated Jekyll site directory.
+_site/
+
+# Ignore caches and logs.
+.sass-cache/
+.asset-cache/
+
+# Ignore node dependencies, if any.
+node_modules/
+
+# Ignore bower things
+bower_components

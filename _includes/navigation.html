@@ -1,0 +1,18 @@
+{% if page.header %}
+  {% if page.header.theme %}
+    {% capture theme %} {{ page.header.theme }}{% endcapture %}
+  {% else %}
+    {% capture theme %}light{% endcapture %}
+  {% endif %}
+{% else %}
+  {% capture theme %}light{% endcapture %}
+{% endif %}
+
+<nav class="{{ theme }}" role="navigation">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/">About</a></li>
+    <li><a href="/">Projects</a></li>
+    <li><a href="/">Writing</a></li>
+  </ul>
+</nav>

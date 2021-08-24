@@ -1,0 +1,17 @@
+---
+layout: compress
+---
+
+<!doctype html>
+<html data-made-with="❤︎">
+
+{% include head.html %}
+<body{% if page.class %} class="{{ page.class }}"{% endif %}>
+
+  {{ content }}
+
+  {% javascript 'init' %}
+
+</body>
+
+</html>

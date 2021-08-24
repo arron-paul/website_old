@@ -1,0 +1,35 @@
+@import 'bourbon';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+main, header, footer, p, pre, table, figure,
+blockquote, code, h1, h2, h3, h4, h5, h6 {
+  margin-bottom: $baseline;
+}
+
+picture {
+  display: block;
+  @include user-select(none);
+}
+
+nav ul, nav ol {
+  padding-left: 0;
+
+  li, a {
+    display: inline-block;
+  }
+
+}

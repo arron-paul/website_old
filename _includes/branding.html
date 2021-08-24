@@ -1,0 +1,17 @@
+{% if page.header %}
+  {% if page.header.theme %}
+    {% capture theme %} {{ page.header.theme }}{% endcapture %}
+  {% else %}
+    {% capture theme %} light{% endcapture %}
+  {% endif %}
+{% else %}
+  {% capture theme %} light{% endcapture %}
+{% endif %}
+
+<figure class="branding{{ theme }}">
+
+  {% include branding/glyph.svg %}
+
+  {% include branding/text.svg %}
+
+</figure>

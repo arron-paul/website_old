@@ -1,0 +1,58 @@
+header.header {
+  display: block;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 1.5em;
+  padding-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  z-index: 1;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+
+  &.fixed-in-place {
+    position: fixed;
+  }
+
+  &.with-background {
+    background-color: rgba(0, 0, 0, .05);
+  }
+
+  /* Make sure the navigation is above the cover photo */
+  nav {
+    z-index: 11;
+  }
+
+  /* Alignment and content justification */
+  .wrap {
+    vertical-align: middle;
+    text-align: justify;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+      height: 0;
+      font-size: 0;
+      line-height: 0;
+    }
+
+    * {
+      display: inline-block;
+    }
+
+    /* Mobile layout of the header wrap */
+    @media screen and (max-width: $width-mobile) {
+
+      svg {
+        margin-right: 2em;
+      }
+
+    }
+
+  }
+
+}

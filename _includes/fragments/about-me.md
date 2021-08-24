@@ -1,0 +1,1 @@
+I am a 25-year old designer & programmer from Nottingham, England. I dip my brush in both front-end and back-end aspects, covering everything from <abbr title="Syntatically Awesome Style Sheets">SASS</abbr> to <abbr title="Secure Linux">SELinux</abbr> — C++ to Cocoa Touch.

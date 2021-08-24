@@ -1,0 +1,17 @@
+/* Fonts */
+$font-fancy: 'Whitney SSm A', 'Whitney SSm B', sans-serif;
+
+/* Font families */
+$font-sans: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+$font-serif: 'Georgia', serif;
+$font-code: 'Source Code Pro', monospace;
+
+/* Root-level scaling */
+$font-size: 112.5%;
+$baseline-unitless: 28 / (14 * ($font-size / 100%) );
+$baseline: $baseline-unitless * 1rem;
+
+/* Media queries */
+$width-mobile: 700px;
+$width-desktop: 960px;
+$width-desktop-big: 1120px;

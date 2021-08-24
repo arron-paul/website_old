@@ -1,0 +1,57 @@
+<head>
+
+
+
+  <title>{% if page.title %}{{ page.title }} — {{ site.name }}{% endif %}</title>
+  <meta charset="utf-8">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  {% if page.social.type == 'article' %}<meta name="author" content="{{ site.author }}">{% endif %}
+  <!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+
+  <link rel="shortcut icon" href="{% asset_path 'favicons/apple-touch-icon.png' %}">
+  <link rel="icon" href="{% asset_path 'favicons/apple-touch-icon.png' %}">
+  <link rel="mask-icon" href="{% asset_path 'favicons/favicon-nopadding.svg' %}" color="#000000">
+  <link rel="apple-touch-icon" href="{% asset_path 'favicons/apple-touch-icon.png' %}">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <meta property="og:site_name" content="arron.io">
+  <meta property="og:profile_id" content="710910978">
+  <meta property="og:title" content="{% if page.social.title %}{{ page.social.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.social.description %}{{ page.social.description }}{% else %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{% endif %}">
+  {% if page.social.type %}<meta property="og:type" content="{{ page.social.type }}">{% endif %}
+  {% if page.social.image %}<meta property="og:image" content="{{ site.url }}{% asset_path {{page.social.image}} %}">{% endif %}
+
+  {% if page.social.large_image and page.social.image %}
+    <meta name="twitter:card" content="summary_large_image">
+  {% else %}
+    <meta name="twitter:card" content="summary">
+  {% endif %}
+  <meta name="twitter:site" content="@arronjeffery">
+  <meta name="twitter:creator" content="@arronjeffery">
+  <meta name="twitter:title" content="{% if page.social.title %}{{ page.social.title }}{% else %}{{ page.title }}{% endif %}">
+  <meta name="twitter:description" content="{% if page.social.description %}{{ page.social.description }}{% else %}{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}{% endif %}">
+  {% if page.social.image %}<meta name="twitter:image" content="{{ site.url }}{% asset_path {{page.social.image}} %}">{% endif %}
+
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6279872/788526/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  {% stylesheet 'style' %}
+  {% if page.color %}
+    <style>
+        a, a:visited, a:hover, abbr {
+          color: {{ page.color }};
+        }
+        ::selection {
+          background-color: {{ page.color }} !important;
+          color: #fff;
+        }
+        ::-moz-selection {
+          background-color: {{ page.color }} !important;
+          color: #fff;
+        }
+    </style>
+  {% endif %}
+</head>

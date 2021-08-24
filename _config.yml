@@ -1,0 +1,50 @@
+# Website information.
+name: Arron Jeffery
+author: Arron Jeffery
+url: https://arron.io
+timezone: Europe/London
+
+# Build settings
+markdown: kramdown
+
+# URL formatting
+permalink: pretty
+
+# Excerpt parsing for posts
+excerpt_separator: <!--more-->
+
+# Files and folders to exclude from _site
+exclude: [
+  "node_modules",
+  "Gemfile",
+  "Gemfile.lock",
+  "vendor",
+  "package.json",
+  "readme.md",
+  "Gruntfile.coffee",
+  "bower_components",
+  "bower.json"
+]
+
+# Gems to include
+gems: [
+  "bourbon",
+  "neat",
+  "jekyll-assets"
+]
+
+# Asset options
+assets:
+  gzip: false
+  js_compressor: uglifier
+  css_compressor: sass
+
+# Stylesheet customization.
+sass:
+  sass_dir: _sass
+  style: :expanded
+
+# Types of content
+collections:
+  projects:
+    output: true

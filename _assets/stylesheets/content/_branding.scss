@@ -1,0 +1,46 @@
+/* Branding and name of website in the header */
+figure.branding {
+  margin-bottom: 0;
+
+  svg {
+    vertical-align: middle;
+    max-height: 3.125em;
+    stroke: transparent;
+
+    &.glyph {
+      width: 1.85em;
+    }
+
+    &.name {
+      width: 6.2em;
+      padding-right: .04em; /* Safari bug */
+      margin-left: .4em;
+    }
+
+  }
+
+  &.dark {
+
+    svg.glyph, svg.name {
+      fill: #fff;
+    }
+
+  }
+
+  &.light {
+
+    svg.glyph, svg.name {
+      fill: #000;
+    }
+
+  }
+
+  @media screen and (max-width: $width-mobile) {
+
+    svg.name {
+      display: none;
+    }
+
+  }
+
+}

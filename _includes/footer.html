@@ -1,0 +1,30 @@
+{% if page.footer.display != false %}
+<footer class="footer {{ page.footer.display }}">
+
+    <figure class="wrap">
+
+      <section class="about">
+        <h3>About</h3>
+        <p>{% include fragments/about-me.md %}</p>
+      </section>
+
+      <section class="recent">
+        <h3>Recent Posts</h3>
+        <ul class="recent-posts">
+          {% for post in site.posts limit:5 %}
+          <li><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section class="latest-jam">
+        <h3>Latest Jam</h3>
+        <div class="last-fm">
+          <span>Hmm, your internet connection seems to be a little flakey. This part is still loading.</span>
+        </div>
+      </section>
+
+    </figure>
+
+</footer>
+{% endif %}
