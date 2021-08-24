@@ -4,6 +4,10 @@ author: Arron Jeffery
 url: https://arron.io
 timezone: Europe/London
 
+# Commit info.
+sha1: nosha1
+branch: nobranch
+
 # Build settings
 markdown: kramdown
 
